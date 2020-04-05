@@ -1,0 +1,37 @@
+{
+  "name": "emigatron",
+  "version": "0.1.0",
+  "description": "Create free encrypted room for chating. Do not delete messages, just update a token.",
+  "main": "server/bot.js",
+  "scripts": {
+    "install": "npm install && cd server && cd client && npm install",
+    "ssl": "cd server && cd ssl && node ssl.js",
+    "bot": "cd server && cd bot && nodemon start-bot.js",
+    "client": "cd server && cd client && npm run start",
+    "build": "cd server && cd client && npm run build",
+    "server": "cd server && cross-env NODE_ENV=production nodemon server.js",
+    "dev": "concurrently \"npm run bot\" \"npm run client\"",
+    "prod": "npm run build &&  npm run ssl && concurrently \"npm run bot\" \"npm run server\""
+  },
+  "author": "Emin Muhammadi <muemin17631@sabah.edu.az> (https://github.com/eminmuhammadi)",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "1.7.4",
+    "concurrently": "5.1.0",
+    "cross-env": "7.0.2",
+    "crypto-js": "4.0.0",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "firebase-admin": "8.10.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "https": "1.0.0",
+    "ngrok": "3.2.7",
+    "node-telegram-bot-api": "0.40.0",
+    "nodemon": "2.0.2",
+    "path": "0.12.7",
+    "react-scroll-to-bottom": "1.3.2",
+    "selfsigned": "1.10.7",
+    "uuid": "7.0.3"
+  }
+}

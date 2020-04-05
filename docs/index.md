@@ -1,7 +1,7 @@
 # emigatron
 Create free encrypted room for chating. Do not delete messages, just update a token.
 
-![emigatron-landing](docs/welcome.png)
+![emigatron-landing](welcome.png)
 
 ## Installing
 ### Installing Project

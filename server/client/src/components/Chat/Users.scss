@@ -1,0 +1,15 @@
+.user-profile{
+  height: 48px;
+  width: 48px;
+}
+.users{
+  height: 91vh;
+  overflow-x: hidden;
+}
+.user{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &:hover{
+    background-color: rgba($color: #5682a3, $alpha: 0.04);
+  }
+}

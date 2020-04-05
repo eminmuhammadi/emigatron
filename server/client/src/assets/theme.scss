@@ -1,0 +1,47 @@
+body {
+    background-color: #e7ebf0;
+    word-break: break-all;
+    font-family: 'Roboto', sans-serif !important;
+}
+.bg-white {
+    background-color: #fff;
+}
+
+@media (min-width: 992px){
+ .landing {
+    float: right !important;
+ }
+}
+
+.install {
+    overflow-y: hidden;
+}
+
+* {
+    word-wrap    : break-word;
+    overflow-wrap: break-word;
+    color: #5682a3;
+}   
+.border,.border-left,.border-right,.border-top,.border-bottom {
+    border-color: #fff !important;
+}
+.c-color{
+    color: #5682a3;
+}
+.c-bg{
+    background-color: #5682a3;
+    border-color: #5682a3;
+    *{
+        color: #fff !important;
+    }
+}
+.badge-primary,.badge{
+    background-color:#5682a3 !important;
+}
+.logo {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    filter: saturate(8);
+}

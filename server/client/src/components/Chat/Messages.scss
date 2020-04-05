@@ -1,0 +1,32 @@
+.messages-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 92.7vh;
+  background-color: rgba($color: #5682a3, $alpha: 0.04);
+}
+.messages-follow {
+  display: none;
+}
+.message-profile{
+  height: 32px;
+  width: 32px;
+}
+.message-header{
+  font-size: 1rem;
+}
+.msg-room-name{
+  display: none;
+}
+@media (max-width: 992px){
+  .time {
+      display: none;
+  }
+  .msg-room-name {
+    display: inline;
+  }
+}
+.message{
+  &:hover{
+    background-color: rgba($color: #5682a3, $alpha: 0.04);
+  }
+}

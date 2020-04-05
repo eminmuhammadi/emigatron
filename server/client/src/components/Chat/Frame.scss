@@ -1,0 +1,16 @@
+.chat {
+    height: 99vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.sidebar{
+    height: 100%;
+    overflow-x: hidden;
+    overflow: auto;
+    box-sizing: border-box;
+}
+@media (max-width: 776px){
+  .sidebar {
+      display: none;
+  }
+}
