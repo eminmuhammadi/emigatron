@@ -2,7 +2,7 @@
 const path  = require('path');
 const { BOT } = require(path.join(__dirname, '/../bot.js'));
 /**
-  @bot use registered credientals
+  @bot emigatron
   @info Get user information from firebase database
   @command help
 */

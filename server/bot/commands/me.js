@@ -3,7 +3,7 @@ const path  = require('path');
 const { DB } = require(path.join(__dirname, '/../../config.js'));
 const { BOT } = require(path.join(__dirname, '/../bot.js'));
 /**
-  @bot use registered credientals
+  @bot emigatron
   @info Get user information from firebase database
   @command me
 */

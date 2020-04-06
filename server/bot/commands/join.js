@@ -3,7 +3,7 @@ const path  = require('path');
 const { DB } = require(path.join(__dirname, '/../../config.js'));
 const { BOT } = require(path.join(__dirname, '/../bot.js'));
 /**
- @bot register user
+ @bot emigatron
  @info Join to room
  @command join
  */

@@ -4,7 +4,7 @@ const { DB , SECRET } = require(path.join(__dirname, '/../../config.js'));
 const { BOT } = require(path.join(__dirname, '/../bot.js'));
 const CryptoJS = require("crypto-js");
 /**
- @bot register user
+ @bot emigatron
  @info Say message in room
  @command join
  */

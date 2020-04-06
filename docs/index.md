@@ -1,7 +1,7 @@
 # emigatron
 Create free encrypted room for chating. Do not delete messages, just update a token.
 
-![emigatron-landing](welcome.png)
+![emigatron-landing](docs/welcome.png)
 
 ## Installing
 ### Installing Project
@@ -14,7 +14,7 @@ npm run install
 ```
 
 ### Editing configuration files
-Rename all *.extension.sample files to *.extension and fill config data
+Rename all ```*.extension.sample``` files to ```*.extension``` and fill config data
 
 #### For doing this you need to api keys:
 - Firebase 

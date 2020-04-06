@@ -14,7 +14,7 @@ npm run install
 ```
 
 ### Editing configuration files
-Rename all *.extension.sample files to *.extension and fill config data
+Rename all ```*.extension.sample``` files to ```*.extension``` and fill config data
 
 #### For doing this you need to api keys:
 - Firebase 

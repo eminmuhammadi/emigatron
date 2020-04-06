@@ -4,7 +4,7 @@ const { DB } = require(path.join(__dirname, '/../../config.js'));
 const { BOT } = require(path.join(__dirname, '/../bot.js'));
 const { v4: uuid } = require('uuid');
 /**
- @bot register user
+ @bot emigatron
  @info Update room token
  @command update
  */
