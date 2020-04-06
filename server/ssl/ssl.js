@@ -29,5 +29,5 @@ fs.writeFile('cert.pem', certificate.cert,function (err) {
 
 module.exports = {
   key:path.join(__dirname, 'key.pem'),
-  crt:path.join(__dirname, 'crt.pem')
+  crt:path.join(__dirname, 'cert.pem')
 };
