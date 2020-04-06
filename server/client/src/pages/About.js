@@ -41,7 +41,7 @@ class About extends Component {
             </div>
             <div className="pt-5 pb-5 row align-items-center justify-content-center">
               <h1 className="p-2">Commands</h1>
-              <ul>
+              <ul className="container">
                 <li><h4><code>/help</code> - list of commands</h4></li>
                 <li><h4><code>/start</code> - start to use bot</h4></li>
                 <li><h4><code>/token</code> - update user's token</h4></li>

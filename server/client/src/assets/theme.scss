@@ -1,6 +1,5 @@
 body {
     background-color: #e7ebf0;
-    word-break: break-all;
     font-family: 'Roboto', sans-serif !important;
 }
 .bg-white {
@@ -11,6 +10,10 @@ body {
  .landing {
     float: right !important;
  }
+}
+
+ul {
+ list-style-type: none;
 }
 
 .install {
