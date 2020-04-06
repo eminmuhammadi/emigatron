@@ -1,6 +1,6 @@
 {
   "name": "emigatron-client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Create free encrypted room for chating. Do not delete messages, just update a token.",
   "private": true,
   "dependencies": {

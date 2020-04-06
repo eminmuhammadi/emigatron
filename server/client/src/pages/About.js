@@ -50,6 +50,7 @@ class About extends Component {
                 <li><h4><code>/create <code>room-name</code></code> - create room</h4></li>
                 <li><h4><code>/update <code>room-name</code></code> - update token of room</h4></li>
                 <li><h4><code>/ban <code>room-name</code> <code>"id"</code></code> - ban user on room</h4></li>
+                <li><h4><code>/room <code>room-name</code></code> - show all data for room</h4></li>
               </ul>
             </div>
             <div className="pt-5 pb-2 text-muted">

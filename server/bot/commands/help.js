@@ -22,6 +22,7 @@ BOT.onText(/\/help/, function onMessage(msg) {
     /create <code>room-name</code> - create room
     /update <code>room-name</code> - update token of room
     /ban <code>room-name</code> <code>"id"</code> - ban user on room
+    /room <code>room-name</code> - show all data for room
     \n
     `,{
       parse_mode:"HTML"

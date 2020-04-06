@@ -18,6 +18,7 @@ require(path.join(__dirname, '/commands/create.js'));
 require(path.join(__dirname, '/commands/update.js'));
 require(path.join(__dirname, '/commands/ban.js'));
 require(path.join(__dirname, '/commands/help.js'));
+require(path.join(__dirname, '/commands/room.js'));
 
 console.log(`\x1b[40m`,`\x1b[32m`,
 `         
