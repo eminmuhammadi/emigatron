@@ -2,6 +2,7 @@
 const path  = require('path');
 const { DB } = require(path.join(__dirname, '/../../config.js'));
 const { BOT } = require(path.join(__dirname, '/../bot.js'));
+const { v4: uuid } = require('uuid');
 /**
   @bot emigatron
   @info Welcome message
@@ -19,9 +20,17 @@ BOT.onText(/\/start/, function onMessage(msg) {
         date:msg.date || null
     })
     .then(()=>{
-      BOT.getMe().then((data)=>{
-        BOT.sendMessage(msg.chat.id, `Howdy, I am @${data.username},\nHow could I help you?`,{
-            parse_mode:"HTML"
+      const token = uuid();
+      DB.ref.child('users/' + msg.from.id + '/token').set({
+          id: msg.from.id || null,
+          token:token || null,
+          date:msg.date || null
+      })
+      .then(()=>{
+        BOT.getMe().then((data)=>{
+          BOT.sendMessage(msg.chat.id, `Howdy, I am @${data.username},\nHow could I help you?`,{
+              parse_mode:"HTML"
+          });
         });
       });
   })}

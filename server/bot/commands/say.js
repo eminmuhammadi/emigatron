@@ -11,7 +11,7 @@ const CryptoJS = require("crypto-js");
 BOT.onText(/\/say (.+) "(.+)"/, (msg, match) => {
 
     const room = match[1];
-    const message = CryptoJS.AES.encrypt(match[2],SECRET).toString();
+    const message = match[2];
     try {
         DB.ref.child('rooms/' + room + '/users/permission/'+ msg.from.id).once("value", function(data) {
             if(!data.exists()) {
@@ -26,15 +26,18 @@ BOT.onText(/\/say (.+) "(.+)"/, (msg, match) => {
                     });    
                 }
                 else {
-                    DB.ref.child('rooms/' + room + '/messages').push({
-                        user_id: msg.from.id || null,
-                        username: msg.from.username || null,
-                        message:message || null,
-                        date:msg.date || null
-                    })
-                    .then(()=>{
-                        BOT.sendMessage(msg.chat.id, `<b>[${room}]</b> => @${msg.from.username} : ${match[2]}` , {
-                            parse_mode:'HTML'
+                    DB.ref.child('users/' + msg.from.id + '/token').once("value", function(user_data) {
+                        const enc_message = CryptoJS.AES.encrypt(message,user_data.val().token).toString();
+                        DB.ref.child('rooms/' + room + '/messages').push({
+                            user_id: msg.from.id || null,
+                            username: msg.from.username || null,
+                            message:enc_message || null,
+                            date:msg.date || null
+                        })
+                        .then(()=>{
+                            BOT.sendMessage(msg.chat.id, `<b>[${room}]</b> => @${msg.from.username} : ${message}` , {
+                                parse_mode:'HTML'
+                            });
                         });
                     });
                 }

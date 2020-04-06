@@ -10,10 +10,8 @@ import { FirebaseDatabaseProvider, FirebaseDatabaseNode } from '@react-firebase/
 import Moment from 'react-moment';
 import ScrollToBottom from 'react-scroll-to-bottom';
 import config from '../../config';
-import AES from 'crypto-js/aes';
-import CryptoJS from 'crypto-js';
 import './Messages.scss';
-
+import CryptMessage from './CryptMessage.js';
 
 class Messages extends Component {
   render() {
@@ -52,24 +50,24 @@ class Messages extends Component {
                            * @message
                            * @date
                            */
-                          <div key={keys[i]} className="container message rounded-0 pt-3 pb-3 mb-3 mt-3">
-                            <div className="container">
-                              <div className="media">
-                                <div className="shadow-sm message-profile bg-light rounded-circle border"/>
-                                  <div className="media-body pl-3 pr-3">
-                                    <div className="mt-0 d-flex justify-content-between">
-                                      <p className="message-header text-muted">
-                                        @{data.username}
-                                      </p>
-                                      <p className="message-header text-muted time">
-                                        <Moment className="text-muted" format="DD MMMM HH:mm, YYYY">{new Date(data.date * 1000)}</Moment>
-                                      </p>
-                                    </div>
-                                    <p>{AES.decrypt(data.message,config.BACKEND_SECRET).toString(CryptoJS.enc.Utf8)}</p>
-                                  </div>
+                            <div key={keys[i]} className="container message rounded-0 pt-3 pb-3 mb-3 mt-3">
+                              <div className="container">
+                                <div className="media">
+                                  <div className="shadow-sm message-profile bg-light rounded-circle border"/>
+                                    <div className="media-body pl-3 pr-3">
+                                        <div className="mt-0 d-flex justify-content-between">
+                                          <p className="message-header text-muted">
+                                            @{data.username}
+                                          </p>
+                                          <p className="message-header text-muted time">
+                                            <Moment className="text-muted" format="DD MMMM HH:mm, YYYY">{new Date(data.date * 1000)}</Moment>
+                                          </p>
+                                        </div>
+                                        <CryptMessage id={data.user_id} message={data.message}/>
+                                     </div>
+                                </div>
                               </div>
-                            </div>  
-                          </div>  
+                            </div>        
                         ))} 
                       </ScrollToBottom>
                  </div> 

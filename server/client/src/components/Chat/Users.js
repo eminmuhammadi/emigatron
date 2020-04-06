@@ -29,7 +29,7 @@ class Messages extends Component {
                 return(
                   <div>
                     <div className="bg-white shadow-sm sticky-top container pt-3 d-flex justify-content-between">
-                      <p>Users</p>
+                      <p><b>Users</b></p>
                       <p><span className="badge badge-secondary" key={uuid()}>{values.length}</span></p>
                     </div>  
                     <div>

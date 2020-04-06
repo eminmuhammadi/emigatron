@@ -7,9 +7,7 @@ const config = ({
     storageBucket: "",
     messagingSenderId: "",
     appId: "",
-    measurementId: "",
-    // Emigatron Config 
-    BACKEND_SECRET: ""
+    measurementId: ""
 });
 
 export default config;

@@ -31,7 +31,6 @@ module.exports = {
     HTTPS_PORT: 8443,
     TELEGRAM_TOKEN: '',
     NGROK_TOKEN: '',
-    SECRET: '',
     OPTIONS:{
       polling:true,
       filepath: false
