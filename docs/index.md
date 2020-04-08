@@ -12,7 +12,7 @@ git clone https://github.com/eminmuhammadi/emigatron.git
 ```
 ### Installing dependencies
 ```bash
-npm run install
+npm install && cd server/client install
 ```
 
 ### Editing configuration files

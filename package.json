@@ -4,7 +4,6 @@
   "description": "Create free encrypted room for chating. Do not delete messages, just update a token.",
   "main": "server/bot.js",
   "scripts": {
-    "install": "npm install && cd server && cd client && npm install",
     "ssl": "cd server && cd ssl && node ssl.js",
     "bot": "cd server && cd bot && nodemon start-bot.js",
     "client": "cd server && cd client && npm run start",
